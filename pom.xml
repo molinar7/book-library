@@ -58,6 +58,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>book-library</finalName>
 	</build>
 
 </project>

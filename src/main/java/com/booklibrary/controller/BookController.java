@@ -2,17 +2,17 @@ package com.booklibrary.controller;
 
 import com.booklibrary.entity.Book;
 import com.booklibrary.service.BookService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping(path= "api/v1/library")
 public class BookController {
 
-    @Autowired
-    private BookService bookService;
+    private final BookService bookService;// this dependency is injected in the constuctor using lombok
 
     @PostMapping("/addbook")
     public Book addBook(@RequestBody Book book){
